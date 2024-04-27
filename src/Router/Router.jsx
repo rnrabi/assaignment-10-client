@@ -9,6 +9,7 @@ import Register from "../Pages/Register/Register/Register";
 import PrivateRoute from "../Routs/PrivateRoute";
 import Error from "../Pages/Error/Error";
 import CraftDetail from "../Pages/Home/CraftDetail";
+import Update from "../Pages/MyCartAndCarftLIst/Update";
 
 
 
@@ -45,6 +46,11 @@ export const router = createBrowserRouter([
             {
                 path:'/craftDetail/:id',
                 element:<PrivateRoute><CraftDetail></CraftDetail></PrivateRoute>
+            },
+            {
+                path:'/myArtCrftItem/:id',
+                element:<PrivateRoute><Update></Update></PrivateRoute>,
+                loader:({params})=>fetch(`http://localhost:5000/myArtCrftItem/${params.id}`)
             }
         ]
     },
