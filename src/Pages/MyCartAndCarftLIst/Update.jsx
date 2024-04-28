@@ -1,13 +1,67 @@
 import { useLoaderData } from "react-router-dom";
+import useAllartCraftItem from "../../hooks/useAllartCraftItem";
+import useMyCraft from "../../hooks/useMyCraft";
+import Swal from "sweetalert2";
 
 
 const Update = () => {
     const updateSingleData = useLoaderData()
     console.log(updateSingleData)
+
+    const {refetch } = useAllartCraftItem() 
+    const {refetch1} = useMyCraft()  //call the hook for refetch
+
+const handleUpdate =(e)=>{
+
+    e.preventDefault();
+        const form = e.target;
+        const image = form.image.value;
+        const item = form.item.value;
+        const email = form.email.value;
+        const name = form.name.value;
+        const stock = form.stock.value;
+        const time = form.time.value;
+        const description = form.description.value;
+        const customization = form.customization.value;
+        const ratting = form.ratting.value;
+        const price = form.price.value;
+        console.log(image, item, email, name, stock, time, description, customization, ratting, price)
+        const craft = { image, item, email, name, stock, time, description, customization, ratting, price }
+        // console.log(craft)
+
+        fetch(`http://localhost:5000/myArtCrftItem/${updateSingleData._id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(craft)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if(data.modifiedCount > 0){
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Updated successfully",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            })
+
+        refetch()
+        refetch1()
+}
+
+
+
+
+
     return (
         <div>
         <section className="p-6 dark:bg-gray-100 dark:text-gray-900">
-            <form noValidate="" action="" className="container flex flex-col mx-auto space-y-12">
+            <form onSubmit={handleUpdate} noValidate="" action="" className="container flex flex-col mx-auto space-y-12">
                 <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
                     <div className="space-y-2 col-span-full lg:col-span-1">
                         <p className="text-3xl font-bold">Update Your Craft</p>
