@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { authContext } from "../../../AuthProvider/AuthProvider";
 import useAllartCraftItem from "../../../hooks/useAllartCraftItem";
 import useMyCraft from "../../../hooks/useMyCraft";
+import Swal from "sweetalert2";
 
 
 
@@ -38,6 +39,15 @@ const AddCraftItem = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
+                if(data.acknowledged){
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Successfully added the craft",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
             })
 
         refetch()
