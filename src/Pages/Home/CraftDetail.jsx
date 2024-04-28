@@ -13,8 +13,8 @@ const CraftDetail = () => {
         <div>
 
             <div className="md:grid grid-cols-12 gap-4 mt-10">
-                <div className="col-span-8">
-                    <img className="w-full" src={singleData?.image} alt="" />
+                <div className="col-span-8 ">
+                    <img className="w-full h-[600px]" src={singleData?.image} alt="" />
                 </div>
                 <div className="col-span-4">
 

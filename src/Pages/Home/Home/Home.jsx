@@ -1,3 +1,4 @@
+import ArtCraftCategory from "../ArtCraftCategory";
 import Banner from "../Banner";
 import CraftItem from "../CraftItem";
 
@@ -8,6 +9,7 @@ const Home = () => {
             <h2>This is home</h2>
             <Banner></Banner>
             <CraftItem></CraftItem>
+            <ArtCraftCategory></ArtCraftCategory>
         </div>
     );
 };

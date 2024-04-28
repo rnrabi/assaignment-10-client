@@ -13,7 +13,7 @@ const CraftItem = () => {
           allArtCraftItem.map(allArtCraft => <div
             key={allArtCraft._id}
             className="card w-96 glass">
-            <figure><img src={allArtCraft.image} alt="painting!" /></figure>
+            <figure><img className="h-96 w-full" src={allArtCraft.image} alt="painting!" /></figure>
             <div className="card-body">
               <h2 className="card-title">{allArtCraft.item}</h2>
               <p>Stock: {allArtCraft.price}</p>
