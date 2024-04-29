@@ -22,7 +22,7 @@ const Subcategory = () => {
                             <h2 className="card-title">{subcat.item_name}</h2>
                             <p>Subcategory_name : {subcat.subcategory_name}</p>
                             <p>Sort description : {subcat.short_description}</p>
-                            <p>Processing_time : {subcat.processign_time}</p>
+                            <p>Processing_time : {subcat.processing_time}</p>
                             <p>Price : {subcat.price}</p>
                             <p>Rating : {subcat.rating}</p>
                             <div className="card-actions justify-end">
