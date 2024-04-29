@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import useAllartCraftItem from "../../../hooks/useAllartCraftItem";
 
 
@@ -43,7 +44,7 @@ const AllArtCraftItem = () => {
                             <td>{allArtCraft.price}</td>
 
                             <th>
-                                <button className="btn btn-ghost btn-xs">details</button>
+                              <Link to={`/allArtAndCraftItem/${allArtCraft._id}`}> <button className="btn btn-ghost btn-xs">details</button></Link>
                             </th>
                         </tr>)
                     }

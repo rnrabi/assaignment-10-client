@@ -12,6 +12,7 @@ import CraftDetail from "../Pages/Home/CraftDetail";
 import Update from "../Pages/MyCartAndCarftLIst/Update";
 import Subcategory from "../Pages/Home/Subcategory";
 import SubcategoryDetails from "../Pages/Home/SubcategoryDetails";
+import AllAartAndCraftItemDetails from "../Pages/AllArt&Craft/AllAartAndCraftItemDetails";
 
 
 
@@ -28,6 +29,11 @@ export const router = createBrowserRouter([
             {
                 path: '/allArtAndCraftItem',
                 element: <AllArtCraftItem></AllArtCraftItem>
+            },
+            {
+                path:'/allArtAndCraftItem/:id',
+                element:<PrivateRoute><AllAartAndCraftItemDetails></AllAartAndCraftItemDetails></PrivateRoute>,
+                loader:({params})=>fetch(`http://localhost:5000/myArtCrftItem/${params.id}`)
             },
             {
                 path: '/addCraftItem',
