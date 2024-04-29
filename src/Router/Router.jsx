@@ -11,6 +11,7 @@ import Error from "../Pages/Error/Error";
 import CraftDetail from "../Pages/Home/CraftDetail";
 import Update from "../Pages/MyCartAndCarftLIst/Update";
 import Subcategory from "../Pages/Home/Subcategory";
+import SubcategoryDetails from "../Pages/Home/SubcategoryDetails";
 
 
 
@@ -57,6 +58,11 @@ export const router = createBrowserRouter([
                 path:'/category/:subcategory',
                 element:<Subcategory></Subcategory>,
                 loader:({params})=>fetch(`http://localhost:5000/subcategories/${params.subcategory}`)
+            },
+            {
+                path:'/category/cat/:id',
+                element:<SubcategoryDetails></SubcategoryDetails>,
+                loader:({params})=>fetch(`http://localhost:5000/subcategories/subcategory/${params.id}`)
             }
         ]
     },

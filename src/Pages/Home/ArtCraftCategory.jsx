@@ -19,7 +19,7 @@ const ArtCraftCategory = () => {
 
     return (
         <div>
-            <h2 className="text-3xl text-center font-bold mt-10">This art and craft category</h2>
+            <h2 className="text-3xl text-center font-bold mt-10">Art and craft category</h2>
             <div className="md:grid grid-cols-3 gap-3">
                 {
                     categories.map(category => <Link

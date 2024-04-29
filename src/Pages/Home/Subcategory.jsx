@@ -9,7 +9,7 @@ const Subcategory = () => {
 
     return (
         <div>
-            <h2 className="text-3xl text-center font-bold mt-10 mb-5">This is subcategory</h2>
+            <h2 className="text-3xl text-center font-bold mt-10 mb-5">One Subcategory</h2>
             <div className="md:grid grid-cols-3 gap-4">
                 {
                     subcategoryData.map(subcat => <div
@@ -26,7 +26,7 @@ const Subcategory = () => {
                             <p>Price : {subcat.price}</p>
                             <p>Rating : {subcat.rating}</p>
                             <div className="card-actions justify-end">
-                                <Link className="btn btn-primary">View Details</Link>
+                                <Link to={`/category/cat/${subcat._id}`} className="btn btn-primary">View Details</Link>
                             </div>
                         </div>
                     </div>)
