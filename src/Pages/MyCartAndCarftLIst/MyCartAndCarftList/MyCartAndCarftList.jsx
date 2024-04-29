@@ -8,16 +8,16 @@ import { useEffect, useState } from "react";
 
 const MyCartAndCarftList = () => {
   const { myCraft, refetch1 } = useMyCraft()
-  console.log(myCraft)
+  // console.log(myCraft)
   const [myCrafts, setMycrafts] = useState(myCraft)
   console.log(myCrafts)
-  
+
   useEffect(() => {
     setMycrafts(myCraft);
   }, [myCraft]);
-  
+
   const { refetch } = useAllartCraftItem()  //call the hook for refetch
- 
+
   const handleDelete = (_id) => {
 
     Swal.fire({
@@ -50,13 +50,24 @@ const MyCartAndCarftList = () => {
           })
       }
     });
-
-
-
-
-
-
   }
+
+  const filterByYes = () => {
+    const yesData = myCraft.filter(yes => yes.customization === "yes")
+    setMycrafts(yesData);
+  }
+  const filterByNo = () => {
+    const noData = myCraft.filter(no => no.customization === "no")
+    setMycrafts(noData);
+  }
+  const filterByAll = () => {
+    setMycrafts(myCraft);
+  }
+
+
+
+
+
 
 
 
@@ -67,9 +78,9 @@ const MyCartAndCarftList = () => {
         <details className="dropdown ml-4">
           <summary className="m-1 btn">Filter by</summary>
           <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-            <li><a>Yes</a></li>
-            <li><a>No</a></li>
-            <li><a>All</a></li>
+            <li><button onClick={filterByYes}>Customization-Yes</button></li>
+            <li><button onClick={filterByNo}>Customization-No</button></li>
+            <li><button onClick={filterByAll}>All</button></li>
           </ul>
         </details>
       </h2>
