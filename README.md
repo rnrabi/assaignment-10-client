@@ -1,8 +1,17 @@
-# React + Vite
+Website Name : ArtistryAvenue 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Site Link : 
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Bullet Points : 
+
+1. ArtistryAvenue is an online platform dedicated to showcasing and selling various forms of art, including paintings, sculptures, crafts, and more.
+
+2. The website provides a diverse range of artworks created by talented artists from around the world, offering visitors a rich and immersive experience in exploring different artistic styles and genres.
+
+3. ArtistryAvenue offers a user-friendly interface that allows visitors to easily browse through the extensive collection of artworks, filter by categories, and discover new pieces based on their preferences.
+
+4. The platform not only serves as a marketplace for artists to sell their creations but also fosters a community where art enthusiasts can engage with artists, learn about their inspiration, and even commission custom pieces.
+
+5. ArtistryAvenue prioritizes the promotion of emerging artists and supports the growth of the artistic community by providing opportunities for exposure, collaboration, and networking.
+
