@@ -2,16 +2,22 @@ import { Link } from "react-router-dom";
 import useMyCraft from "../../../hooks/useMyCraft";
 import useAllartCraftItem from "../../../hooks/useAllartCraftItem";
 import Swal from "sweetalert2";
+import { useEffect, useState } from "react";
 
 
 
 const MyCartAndCarftList = () => {
   const { myCraft, refetch1 } = useMyCraft()
   console.log(myCraft)
-
+  const [myCrafts, setMycrafts] = useState(myCraft)
+  console.log(myCrafts)
+  
+  useEffect(() => {
+    setMycrafts(myCraft);
+  }, [myCraft]);
+  
   const { refetch } = useAllartCraftItem()  //call the hook for refetch
-
-
+ 
   const handleDelete = (_id) => {
 
     Swal.fire({
@@ -49,7 +55,7 @@ const MyCartAndCarftList = () => {
 
 
 
-   
+
   }
 
 
@@ -72,7 +78,7 @@ const MyCartAndCarftList = () => {
 
       <div className="md:grid grid-cols-3 gap-4">
         {
-          myCraft.map(craft => <div
+          myCrafts.map(craft => <div
             key={craft._id}
             className="card w-96 bg-base-100 shadow-xl">
             <figure><img src={craft.image} alt={craft.item} /></figure>
