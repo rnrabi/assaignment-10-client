@@ -14,7 +14,7 @@ import banner4 from '../../assets/banner/banner4.jpg'
 
 const Banner = () => {
     return (
-        <div>
+        <div className='mt-6'>
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
                 <SwiperSlide>
                     <div className='h-[500px] bg-cover' style={{ backgroundImage: `url(${banner1})` }}>

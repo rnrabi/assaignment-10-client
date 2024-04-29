@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { authContext } from "../../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
@@ -32,13 +33,23 @@ const Register = () => {
         signUpUser(email, password)
             .then(result => {
                 console.log(result.user)
-                Swal.fire({
-                    position: "top-end",
-                    icon: "success",
-                    title: 'You are successfully sign up ',
-                    showConfirmButton: false,
-                    timer: 1500
-                });
+                updateProfile(result.user , {
+                    displayName : name,
+                    photoURL : photo
+                })
+                .then(()=>{
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: 'You are successfully sign up ',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                })
+                .catch(error=>{
+                    console.log(error.message)
+                })
+               
             })
             .catch(error => {
                 console.log(error.message)

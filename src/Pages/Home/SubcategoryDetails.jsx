@@ -18,13 +18,15 @@ const SubcategoryDetails = () => {
 
                             <h2 className="text-xl text-gray-400">1. Item: {subcatDetails?.item_name}</h2>
 
-                            <h2 className="text-xl text-gray-400">2. Description: {subcatDetails?.short_description}</h2>
+                            <h2 className="text-xl text-gray-400">2. Subcategory: {subcatDetails?.subcategory_name}</h2>
 
-                            <h2 className="text-xl text-gray-400">3. Processing Time: {subcatDetails?.processing_time}</h2>
+                            <h2 className="text-xl text-gray-400">3. Description: {subcatDetails?.short_description}</h2>
 
-                            <h2 className="text-xl text-gray-400">4. Price: {subcatDetails?.price}</h2>
+                            <h2 className="text-xl text-gray-400">4. Processing Time: {subcatDetails?.processing_time}</h2>
 
-                            <h2 className="text-xl text-gray-400">5. Ratting: {subcatDetails?.rating}</h2>
+                            <h2 className="text-xl text-gray-400">5. Price: {subcatDetails?.price}</h2>
+
+                            <h2 className="text-xl text-gray-400">6. Ratting: {subcatDetails?.rating}</h2>
 
 
                         </div>

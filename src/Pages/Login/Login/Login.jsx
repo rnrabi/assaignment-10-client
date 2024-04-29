@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from "../../../AuthProvider/AuthProvider";
 import Swal from 'sweetalert2'
 
@@ -7,12 +7,22 @@ import Swal from 'sweetalert2'
 const Login = () => {
     const { googleLogIn, logInUser, githubLogIn } = useContext(authContext)
     // const [errror, setError] = useState('');
+    const location = useLocation()
+    const navigate = useNavigate()
 
     // social signin
     const handleGoogleSignIn = () => {
         googleLogIn()
             .then(result => {
                 console.log(result.user)
+                navigate(location?.state || '/')
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: 'You are successfully Login ',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             })
             .catch(error => {
                 console.log(error.message)
@@ -23,6 +33,14 @@ const Login = () => {
         githubLogIn()
             .then(result => {
                 console.log(result.user)
+                navigate(location?.state || '/')
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: 'You are successfully Login ',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             })
             .catch(error => {
                 console.log(error.message)
@@ -40,6 +58,7 @@ const Login = () => {
         logInUser(email, password)
             .then(result => {
                 console.log(result.user)
+                navigate(location?.state || '/')
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
