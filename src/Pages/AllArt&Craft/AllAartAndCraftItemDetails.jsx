@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 
 const AllAartAndCraftItemDetails = () => {
     const allArtAndCraftDetails = useLoaderData()
-    console.log(allArtAndCraftDetails)
+    // console.log(allArtAndCraftDetails)
     return (
         <div>
             <div className="md:grid grid-cols-12 gap-4 mt-10">

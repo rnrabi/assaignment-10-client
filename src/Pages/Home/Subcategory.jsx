@@ -4,7 +4,7 @@ import { Link, useLoaderData } from "react-router-dom";
 const Subcategory = () => {
 
     const subcategoryData = useLoaderData()
-    console.log(subcategoryData)
+    // console.log(subcategoryData)
 
 
     return (

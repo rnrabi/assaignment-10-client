@@ -7,7 +7,7 @@ const CraftDetail = () => {
     const { id } = useParams()
     // console.log(id)
     const singleData = allArtCraftItem.find(single => single._id == id)
-    console.log(singleData)
+    // console.log(singleData)
     // const { image, customization, description, email, item, name, price, ratting, stock, time } = singleData;
     return (
         <div>

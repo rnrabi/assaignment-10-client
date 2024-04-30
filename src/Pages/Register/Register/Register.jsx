@@ -16,7 +16,7 @@ const Register = () => {
         const email = form.email.value;
         const photo = form.photo.value;
         const password = form.password.value;
-        console.log(name, email, photo, password)
+        // console.log(name, email, photo, password)
 
         setError('')
         if (password.length < 6) {

@@ -10,7 +10,7 @@ const AddCraftItem = () => {
     const { user } = useContext(authContext)
     const {refetch } = useAllartCraftItem() 
     const {refetch1} = useMyCraft()  //call the hook for refetch
-    console.log(user)
+    // console.log(user)
 
     const handleCraftAdd = (e) => {
         e.preventDefault();
@@ -25,7 +25,7 @@ const AddCraftItem = () => {
         const customization = form.customization.value;
         const ratting = form.ratting.value;
         const price = form.price.value;
-        console.log(image, item, email, name, stock, time, description, customization, ratting, price)
+        // console.log(image, item, email, name, stock, time, description, customization, ratting, price)
         const craft = { image, item, email, name, stock, time, description, customization, ratting, price }
         // console.log(craft)
 

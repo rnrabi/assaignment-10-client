@@ -13,7 +13,7 @@ const ArtCraftCategory = () => {
             })
     }, [])
 
-    console.log(categories)
+    // console.log(categories)
 
 
 

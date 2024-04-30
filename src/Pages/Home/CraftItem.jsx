@@ -4,7 +4,7 @@ import useAllartCraftItem from "../../hooks/useAllartCraftItem";
 
 const CraftItem = () => {
   const { allArtCraftItem } = useAllartCraftItem()
-  console.log(allArtCraftItem)
+  // console.log(allArtCraftItem)
   return (
     <div className="mt-8">
       <h2 className="text-3xl text-center font-bold">Our Crafts</h2>
