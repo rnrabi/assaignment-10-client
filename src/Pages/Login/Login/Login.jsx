@@ -88,7 +88,7 @@ const Login = () => {
     return (
         <div>
              <Helmet>
-                <title>ArtitryAvenue | Login</title>
+                <title>ArtistryAvenue | Login</title>
             </Helmet>
             <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 mx-auto shadow-2xl">
                 <h1 className="text-2xl font-bold text-center">Please Login</h1>

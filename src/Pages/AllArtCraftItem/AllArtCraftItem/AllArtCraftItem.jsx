@@ -10,7 +10,7 @@ const AllArtCraftItem = () => {
     return (
         <div>
              <Helmet>
-                <title>ArtitryAvenue | AllArtCraft</title>
+                <title>ArtistryAvenue | AllArtCraft</title>
             </Helmet>
             <h2 className="text-3xl text-center font-bold my-6">All art and craft item</h2>
             <div className="overflow-x-auto">

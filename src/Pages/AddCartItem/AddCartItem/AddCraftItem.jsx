@@ -58,7 +58,7 @@ const AddCraftItem = () => {
     return (
         <div>
              <Helmet>
-                <title>ArtitryAvenue | AddCraft</title>
+                <title>ArtistryAvenue | AddCraft</title>
             </Helmet>
             <section className="p-6 dark:bg-gray-100 dark:text-gray-900">
                 <form onSubmit={handleCraftAdd} noValidate="" action="" className="container flex flex-col mx-auto space-y-12">

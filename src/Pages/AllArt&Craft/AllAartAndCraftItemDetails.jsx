@@ -8,7 +8,7 @@ const AllAartAndCraftItemDetails = () => {
     return (
         <div>
              <Helmet>
-                <title>ArtitryAvenue | CraftDetails</title>
+                <title>ArtistryAvenue | CraftDetails</title>
             </Helmet>
             <div className="md:grid grid-cols-12 gap-4 mt-10">
                 <div className="col-span-8 ">

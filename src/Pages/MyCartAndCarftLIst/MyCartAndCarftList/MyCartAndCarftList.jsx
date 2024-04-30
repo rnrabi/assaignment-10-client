@@ -76,7 +76,7 @@ const MyCartAndCarftList = () => {
   return (
     <div>
       <Helmet>
-        <title>ArtitryAvenue | MyCart&Craft</title>
+        <title>ArtistryAvenue | MyCart&Craft</title>
       </Helmet>
       <h2 className="text-2xl text-center font-bold my-6 mb-6">My cart and carft list
         <details className="dropdown ml-4">
