@@ -33,7 +33,7 @@ export const router = createBrowserRouter([
             {
                 path:'/allArtAndCraftItem/:id',
                 element:<PrivateRoute><AllAartAndCraftItemDetails></AllAartAndCraftItemDetails></PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:5000/myArtCrftItem/${params.id}`)
+                loader:({params})=>fetch(`https://assainment-10-server-two.vercel.app/myArtCrftItem/${params.id}`)
             },
             {
                 path: '/addCraftItem',
@@ -58,17 +58,17 @@ export const router = createBrowserRouter([
             {
                 path: '/myArtCrftItem/:id',
                 element: <PrivateRoute><Update></Update></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/myArtCrftItem/${params.id}`)
+                loader: ({ params }) => fetch(`https://assainment-10-server-two.vercel.app/myArtCrftItem/${params.id}`)
             },
             {
                 path:'/category/:subcategory',
                 element:<Subcategory></Subcategory>,
-                loader:({params})=>fetch(`http://localhost:5000/subcategories/${params.subcategory}`)
+                loader:({params})=>fetch(`https://assainment-10-server-two.vercel.app/subcategories/${params.subcategory}`)
             },
             {
                 path:'/category/cat/:id',
                 element:<SubcategoryDetails></SubcategoryDetails>,
-                loader:({params})=>fetch(`http://localhost:5000/subcategories/subcategory/${params.id}`)
+                loader:({params})=>fetch(`https://assainment-10-server-two.vercel.app/subcategories/subcategory/${params.id}`)
             }
         ]
     },

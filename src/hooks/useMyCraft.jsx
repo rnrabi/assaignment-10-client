@@ -11,7 +11,7 @@ const useMyCraft = () => {
     }
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/craft/${user.email}`)
+        fetch(`https://assainment-10-server-two.vercel.app/craft/${user.email}`)
         .then(res=>res.json())
         .then(data=>setMyCraft(data))
     },[user,toggle1])

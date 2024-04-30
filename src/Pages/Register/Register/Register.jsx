@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { authContext } from "../../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import { updateProfile } from "firebase/auth";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -69,6 +70,9 @@ const Register = () => {
 
     return (
         <div>
+             <Helmet>
+                <title>ArtitryAvenue | Register</title>
+            </Helmet>
             <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 dark:bg-gray-50 dark:text-gray-800 mx-auto shadow-2xl">
                 <div className="mb-8 text-center">
                     <h1 className="my-3 text-4xl font-bold">Please Register</h1>

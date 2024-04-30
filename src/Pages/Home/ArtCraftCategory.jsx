@@ -6,7 +6,7 @@ const ArtCraftCategory = () => {
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/categoriesHeading')
+        fetch('https://assainment-10-server-two.vercel.app/categoriesHeading')
             .then(res => res.json())
             .then(data => {
                 setCategories(data)

@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
 import useAllartCraftItem from "../../../hooks/useAllartCraftItem";
+import { Helmet } from "react-helmet-async";
 
 
 const AllArtCraftItem = () => {
-    const { allArtCraftItem, refetch } = useAllartCraftItem()
+    const { allArtCraftItem } = useAllartCraftItem()
     console.log(allArtCraftItem)
     // const {image, item , stock ,price }=allArtCraftItem;
     return (
         <div>
+             <Helmet>
+                <title>ArtitryAvenue | AllArtCraft</title>
+            </Helmet>
             <h2 className="text-3xl text-center font-bold my-6">All art and craft item</h2>
             <div className="overflow-x-auto">
                 <table className="table">

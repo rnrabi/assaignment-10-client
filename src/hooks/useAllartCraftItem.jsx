@@ -9,7 +9,7 @@ const refetch = ()=>{
 }
 
     useEffect(()=>{
-        fetch('http://localhost:5000/craft')
+        fetch('https://assainment-10-server-two.vercel.app/craft')
         .then(res=>res.json())
         .then(data=>setAllArtCraftItem(data))
     },[toggle])

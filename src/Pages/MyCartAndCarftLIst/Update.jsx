@@ -29,7 +29,7 @@ const handleUpdate =(e)=>{
         const craft = { image, item, email, name, stock, time, description, customization, ratting, price }
         // console.log(craft)
 
-        fetch(`http://localhost:5000/myArtCrftItem/${updateSingleData._id}`, {
+        fetch(`https://assainment-10-server-two.vercel.app/myArtCrftItem/${updateSingleData._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

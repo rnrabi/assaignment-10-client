@@ -3,6 +3,7 @@ import { authContext } from "../../../AuthProvider/AuthProvider";
 import useAllartCraftItem from "../../../hooks/useAllartCraftItem";
 import useMyCraft from "../../../hooks/useMyCraft";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -29,7 +30,7 @@ const AddCraftItem = () => {
         const craft = { image, item, email, name, stock, time, description, customization, ratting, price }
         // console.log(craft)
 
-        fetch(`http://localhost:5000/craft`, {
+        fetch(`https://assainment-10-server-two.vercel.app/craft`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -56,6 +57,9 @@ const AddCraftItem = () => {
 
     return (
         <div>
+             <Helmet>
+                <title>ArtitryAvenue | AddCraft</title>
+            </Helmet>
             <section className="p-6 dark:bg-gray-100 dark:text-gray-900">
                 <form onSubmit={handleCraftAdd} noValidate="" action="" className="container flex flex-col mx-auto space-y-12">
                     <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">

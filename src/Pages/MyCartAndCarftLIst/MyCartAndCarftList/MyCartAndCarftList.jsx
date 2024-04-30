@@ -3,6 +3,7 @@ import useMyCraft from "../../../hooks/useMyCraft";
 import useAllartCraftItem from "../../../hooks/useAllartCraftItem";
 import Swal from "sweetalert2";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -31,7 +32,7 @@ const MyCartAndCarftList = () => {
     }).then((result) => {
       if (result.isConfirmed) {
 
-        fetch(`http://localhost:5000/myArtCrftItem/${_id}`, {
+        fetch(`https://assainment-10-server-two.vercel.app/myArtCrftItem/${_id}`, {
           method: 'DELETE'
         })
           .then(res => res.json())
@@ -74,6 +75,9 @@ const MyCartAndCarftList = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>ArtitryAvenue | MyCart&Craft</title>
+      </Helmet>
       <h2 className="text-2xl text-center font-bold my-6 mb-6">My cart and carft list
         <details className="dropdown ml-4">
           <summary className="m-1 btn">Filter by</summary>

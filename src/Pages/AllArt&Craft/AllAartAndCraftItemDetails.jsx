@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 
 
@@ -6,6 +7,9 @@ const AllAartAndCraftItemDetails = () => {
     // console.log(allArtAndCraftDetails)
     return (
         <div>
+             <Helmet>
+                <title>ArtitryAvenue | CraftDetails</title>
+            </Helmet>
             <div className="md:grid grid-cols-12 gap-4 mt-10">
                 <div className="col-span-8 ">
                     <img className="w-full h-[600px]" src={allArtAndCraftDetails?.image} alt="" />
