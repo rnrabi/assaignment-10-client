@@ -1,5 +1,4 @@
 <h2>Project overview</h2>
-This is excellent artist website. Anyone can add one's arts and anyone buy the arts.
 Website Name : ArtistryAvenue 
 
 Live Site Link : https://assaignment-10-client.web.app/
