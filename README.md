@@ -12,10 +12,6 @@ Featur Bullet Points :
 
 3. ArtistryAvenue offers a user-friendly interface that allows visitors to easily browse through the extensive collection of artworks, filter by categories, and discover new pieces based on their preferences.
 
-4. The platform not only serves as a marketplace for artists to sell their creations but also fosters a community where art enthusiasts can engage with artists, learn about their inspiration, and even commission custom pieces.
-
-5. ArtistryAvenue prioritizes the promotion of emerging artists and supports the growth of the artistic community by providing opportunities for exposure, collaboration, and networking.
-
 
 <h2>Technology:</h2>
 react , javaScript , tailwind
