@@ -5,7 +5,7 @@ Website Name : ArtistryAvenue
 Live Site Link : https://assaignment-10-client.web.app/
 
 
-Bullet Points : 
+Featur Bullet Points : 
 
 1. ArtistryAvenue is an online platform dedicated to showcasing and selling various forms of art, including paintings, sculptures, crafts, and more.
 
@@ -16,4 +16,10 @@ Bullet Points :
 4. The platform not only serves as a marketplace for artists to sell their creations but also fosters a community where art enthusiasts can engage with artists, learn about their inspiration, and even commission custom pieces.
 
 5. ArtistryAvenue prioritizes the promotion of emerging artists and supports the growth of the artistic community by providing opportunities for exposure, collaboration, and networking.
+
+
+<h2>Technology:</h2>
+react , javaScript , tailwind
+<h2>How to run the project by cloning from github</h2>
+Fristly You have to set secret code (key & password) of mongodb , firebase and imagebb. Then You have to go folder which have clone  from github. And then open terminal and command the code "npm run dev"
 
